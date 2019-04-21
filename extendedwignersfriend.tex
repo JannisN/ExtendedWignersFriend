@@ -39,7 +39,7 @@ in $\ket{-}_{L_1}\ket{\uparrow} = \frac{1}{\sqrt{2}}\ket{h}\ket{\uparrow} - \fra
 Zum Schluss misst $W_2$ nach Annahme noch $\ket{-}_{L_2}$, und der Zustand geht in $\frac{1}{\sqrt{2}}\ket{t}\ket{-} - \frac{1}{\sqrt{2}}\ket{h}\ket{-} = \frac{1}{2}\ket{t}\ket{\downarrow} - \frac{1}{2}\ket{t}\ket{\uparrow} - \frac{1}{2}\ket{h}\ket{\downarrow} + \frac{1}{2}\ket{h}\ket{\uparrow}$ über.
 
 \section*{Der zweite Fehler}
-Da das Statement 1 nicht mehr gilt, verschwindet die sich widersprechende Aussage aus dem ursprünglichen Bericht. Jedoch gibt es noch ein Problem. Oben haben wir den Zustand $\frac{1}{2}\ket{t}\ket{\downarrow} - \frac{1}{2}\ket{t}\ket{\uparrow} - \frac{1}{2}\ket{h}\ket{\downarrow} + \frac{1}{2}\ket{h}\ket{\uparrow}$ als Schlusszustand hergeleitet, worauf die Korrektur des ersten Fehlers keinen Einfluss hat. Wenn aber in diesem Zustand in den Standardbasen gemessen wird, ist es möglich, den Zustand $\ket{h}\ket{\uparrow}$ zu messen. Dies scheint aber aus der Perspektive von $F_1$ nicht möglich zu sein; Wenn er $h$ misst, wird er das Qubit, dass er dann an $F_2$ weiterleitet, in den Zustand $\ket{\downarrow}$ versetzen. Ist dies ein anderer Widerspruch? Um diese Frage zu beantworten, betrachten wir zuerst ein simpleres Problem, und wenden dann unsere Erkenntnis auf das Ursprüngliche Problem an.\\\\
+Da das Statement 1 nicht mehr gilt, verschwindet die sich widersprechende Aussage aus dem ursprünglichen Bericht. Jedoch gibt es noch ein Problem. Oben haben wir den Zustand $\frac{1}{2}\ket{t}\ket{\downarrow} - \frac{1}{2}\ket{t}\ket{\uparrow} - \frac{1}{2}\ket{h}\ket{\downarrow} + \frac{1}{2}\ket{h}\ket{\uparrow}$ als Schlusszustand hergeleitet, worauf die Korrektur des ersten Fehlers keinen Einfluss hat. Wenn aber in diesem Zustand in den Standardbasen gemessen wird, ist es möglich, den Zustand $\ket{h}\ket{\uparrow}$ zu messen. Dies scheint aber aus der Perspektive von $F_1$ nicht möglich zu sein; Wenn er $\ket{h}$ misst, wird er das Qubit, dass er dann an $F_2$ weiterleitet, in den Zustand $\ket{\downarrow}$ versetzen. Ist dies ein anderer Widerspruch? Um diese Frage zu beantworten, betrachten wir zuerst ein simpleres Problem, und wenden dann unsere Erkenntnis auf das Ursprüngliche Problem an.\\\\
 Der Aufbau des Experiments ist in Bild 1.1 dargestellt. $Q_1$ und $Q_2$ stellen Quantenbits dar, der Freund, $F$, befindet sich mit den Bits in einer Isolation, die dann von Wigner, $W$, gemessen wird. $Q_1$ kann die Zustände $\ket{t}$, $\ket{h}$ annehmen, und $Q_2$ $\ket{\downarrow}$, $\ket{\uparrow}$. Eine Umrandung um Elemente bedeutet, dass die Umrandung isoliert ist, der Inhalt sich also in eine Superposition versetzen lässt. Die Ellipse um $Q_1$ verdeutlicht hierbei, dass $Q_1$ von $F$ gemessen wird. Es werden die gleichen Messregeln wie im originalen Artikel angewendet. Der Plan läuft wie folgt ab:
 \begin{itemize}
 	\item \textbf{Schritt 1:} $F$ setzt $Q_1$ in eine Superposition $\frac{1}{\sqrt{2}} \ket{h} + \frac{1}{\sqrt{2}} \ket{t}$.
@@ -58,6 +58,19 @@ Nach Schritt 2 hat das Labor von $W$ den Zustand $\frac{1}{\sqrt{2}} \ket{h}\ket
 {\includegraphics[width=0.5\textwidth]{b.png}}
 \end{floatrow}
 \end{figure}
-Allerdings bedeutet dies auch im Allgemeinen, dass es komplexer als erwartet ist, Berechnungen von einem geschachtelten Quantensystem durchzuführen, da man für jeden Anteil der Superposition des äusseren Systems auch eine komplette Superposition des inneren Systems abspeichern muss. Die genaue Beschreibung lasse ich aber hier aus, um mich wieder dem eigentlichen Gedankenexperiment zu widmen.
+Allerdings bedeutet dies auch im Allgemeinen, dass es komplexer als erwartet ist, Berechnungen von einem geschachtelten Quantensystem durchzuführen, da man für jeden Anteil der Superposition des äusseren Systems auch eine komplette Superposition des inneren Systems abspeichern muss. Die genaue Beschreibung lasse ich aber hier aus, um mich wieder dem eigentlichen Gedankenexperiment zu widmen.\\\\
+Zuerst schlage ich aber noch eine Vereinfachung des Gedankenexperiments vor: Die Aufgaben von $W_1$ und $W_2$ lassen sich auf eine einzelne Person, $W$, übertragen, da sich $W_1$ und $W_2$ selber nicht in einer Superposition befinden und in der gleichen Umgebung sind. Dies wird auch in den Abbildungen so sein. Im Artikel wird das Modell ähnlich grafisch dargestellt wie in Abbildung 2.1. Messtechnisch gesehen ist es aber korrekter das Modell darzustellen wie in Abbildung 2.2. Mein Argument dafür ist folgendes: $F_1$ misst das Zufallsbit $Q_1$, und prepariert $Q_2$ entsprechend nach dem Ergebnis der Messung von $Q_1$, bevor $Q_2$ zu $F_2$ verschickt wird. Um aber das Qubit nach $F_2$ zu schicken, darf $F_2$ erst isoliert werden, wenn $F_2$ das Qubit empfangen hat. Da aus $W$'s Sicht das Ganze aber in einer Superposition geschehen muss, muss die Isolation von $F_2$ im Labor von $F_1$ stattfinden. Praktisch sähe dies so aus, dass $F_1$ das Qubit $Q_2$ zusammen mit $F_2$ in $F_1$'s Labor isoliert, und dass dann $F_2$ innerhalb der Isolation $Q_2$ misst. Anschaulicher lässt sich dies mit einem Quantencomputer darstellen: Man misst ein Quantenbit in einer Superposition, und übergibt das Resultat zusammen mit dem Programm(oder sonst das Programm dem Resultat anpassen), und der Quantencomputer führt in Isolation das Programm aus.
+
+\begin{figure}[!htb]
+\begin{floatrow}[2]\
+\ffigbox{\caption*{2.1: Wie das Gedankenexperiment dargestellt wird}}%
+{\includegraphics[width=0.5\textwidth]{c.png}}
+%
+%%%%%%
+\ffigbox{\caption*{2.2: Wie das Gedankenexperiment logisch dargestellt werden sollte}}%
+{\includegraphics[width=0.5\textwidth]{d.png}}
+\end{floatrow}
+\end{figure}
+Da wir nun das Modell geschachtelt dargestellt haben, können wir unsere Erkenntnis aus dem simpleren Problem darauf anwenden.
 
 \end{document}
