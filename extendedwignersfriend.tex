@@ -6,6 +6,12 @@
 
 \usepackage{subcaption}
 \usepackage{floatrow}
+\usepackage{fancyhdr}
+\usepackage{afterpage}
+
+\fancyhf{}
+\pagestyle{fancy}
+\rhead{\textcolor{gray}{Mock Draft}}
 
 \graphicspath{ {img/} }
 
@@ -16,11 +22,10 @@
 \fancyhf{}
 \rhead{Jannis Naske}
 
-\pagenumbering{arabic}
 
 \begin{document}
 \maketitle
-
+\afterpage{\cfoot{\thepage}}
 \section*{Abstract}
 In diesem Dokument schlage ich zwei mögliche Korrekturen zum erweiterten Wigner's Freund Gedankenexperiment von Renner und Frauchiger vor.
 Durch diese Verbesserungen wird der Widerspruch vernichtet, und alle drei Annahmen, \textbf{(Q)}, \textbf{(C)}, und \textbf{(S)}, bleiben unverletzt.
