@@ -1,0 +1,66 @@
+\documentclass[a4paper]{article}
+\usepackage{fancyhdr}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{csquotes}
+
+\usepackage{subcaption}
+\usepackage{floatrow}
+\usepackage{fancyhdr}
+\usepackage{afterpage}
+
+\fancyhf{}
+\pagestyle{fancy}
+\rhead{\textcolor{gray}{Mock Draft}}
+
+\title{My Answer To The Extended Wigner's Friend Thaught Experiment}
+\author{Jannis Naske}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Jannis Naske}
+
+\begin{document}
+\maketitle
+\afterpage{\cfoot{\thepage}}
+
+\section*{Abstract}
+In this document I propose a new postulate in quantum mechanics, that resolves the contradiction in the paper ``Quantum theory cannot consistently describe the use of itself'' by Renner and Frauchiger.
+
+\section*{The Postulate}
+The postulate looks like this:
+\begin{itemize}
+	\item[] Quantum mechanics and its measurements have to be described from the view of the many worlds perspective.
+\end{itemize}
+The reason why this postulate wasn't needed earlier in the past, is that this thaught experiment has a different property compared to other (thaught)experiments:
+Two agents, who see each other in a superposition, make statements about each other.
+This postulate practically has no impact on other, older experiments, since those don't have this property.
+However, it influences the following statement:
+\begin{itemize}
+	\item[] \textbf{Statement $\overline{F}^{n:02}$:} ``I am certain that $W$ will observe $w$ = fail at time $n$:31.''
+\end{itemize}
+The problem is that $\overline{F}$ only makes this statement when he measured $r$ = tails. The postulate now says that in his derivation of the statement,
+he now has to describe himself from the view of the many worlds perspectve. This means that no matter if he measured $\ket{h}$ or $\ket{t}$,
+he still has to consider the situation where he would have measured the other one. We start the analysis from $n$:11 on:
+\begin{align*}
+\frac{1}{\sqrt{3}}\ket{h}\ket{\downarrow} + \sqrt{\frac{2}{3}}\ket{t}\qty(\frac{1}{\sqrt{2}} \ket{\downarrow} + \frac{1}{\sqrt{2}} \ket{\uparrow})
+\end{align*}
+Now we describe this state in the bases that $\overline{W}$ and $W$ use in their measurements:
+$\overline{W}$ measures in the basis $\qty{\ket{+}_{r}, \ket{-}_{r}}$,
+with $\ket{+}_{r} = \frac{1}{\sqrt{2}} \ket{h} + \frac{1}{\sqrt{2}} \ket{t}$, $\ket{-}_{r} = \frac{1}{\sqrt{2}} \ket{h} - \frac{1}{\sqrt{2}} \ket{t}$,
+and $W$ in the basis $\qty{\ket{+}_{w}, \ket{-}_{w}}$,
+where $\ket{+}_{w} = \frac{1}{\sqrt{2}} \ket{\downarrow} + \frac{1}{\sqrt{2}} \ket{\uparrow}$, $\ket{-}_{w} = \frac{1}{\sqrt{2}} \ket{\downarrow} - \frac{1}{\sqrt{2}} \ket{\uparrow}$:
+\begin{align*}
+\frac{3}{\sqrt{12}}\ket{+}_{r}\ket{+}_{w} + \frac{1}{\sqrt{12}}\ket{+}_{r}\ket{-}_{w} - \frac{1}{\sqrt{12}}\ket{-}_{r}\ket{+}_{w} + \frac{1}{\sqrt{12}}\ket{-}_{r}\ket{-}_{w}
+\end{align*}
+As one can see, $W$ can measure $w$ = ok, even from $\overline{F}$'s perspective.
+Under the assumption, that the assumptions Q, C and S are correct, this postulate is forced.
+To actually test this postulate, one can execute this thaught experiment in reality and compare the result to the prediction of this postulate.
+
+\section*{Reference}
+\begin{itemize}
+	\item \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6143649/}
+\end{itemize}
+
+\end{document}
