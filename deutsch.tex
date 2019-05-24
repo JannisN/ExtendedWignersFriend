@@ -1,0 +1,66 @@
+\documentclass[a4paper]{article}
+\usepackage{fancyhdr}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{csquotes}
+
+\usepackage{subcaption}
+\usepackage{floatrow}
+\usepackage{fancyhdr}
+\usepackage{afterpage}
+
+\fancyhf{}
+\pagestyle{fancy}
+\rhead{\textcolor{gray}{Mock Draft}}
+
+\title{Meine Antwort zum erweiterten Wigner's Freund Gedankenexperiment}
+\author{Jannis Naske}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Jannis Naske}
+
+\begin{document}
+\maketitle
+\afterpage{\cfoot{\thepage}}
+
+\section*{Abstract}
+In diesem Dokument schlage ich ein neues Postulat für die Quantenmechanik vor, das den Widerspruch im Artikel zum erweiterten Wigner's Freund Gedankenexperiment von Renner und Frauchiger auflöst.
+
+\section*{Das Postulat}
+Das Postulat lautet wie folgt:
+\begin{itemize}
+	\item[] Die Quantenmechanik mit ihren Messungen muss immer aus der Many-Worlds Perspektive beschrieben werden.
+\end{itemize}
+Der Grund wieso dieses Postulat früher nicht gebraucht wurde, ist, dass dieses Gedankenexperiment eine Änderung im Bezug auf andere (Gedanken)Experimente enthält:
+Zwei Agenten, wobei beide Agenten den anderen jeweils in einer Superposition sehen, machen Aussagen übereinander.
+Dieses Postulat erzeugt praktisch keine Änderungen bei älteren Experimenten, da sie diese Eigenschaft nicht besitzen.
+Jedoch hat es Auswirkungen auf folgende Aussage:
+\begin{itemize}
+	\item[] \textbf{Statement $\overline{F}^{n:02}$:} ``I am certain that $W$ will observe $w$ = fail at time $n$:31.''
+\end{itemize}
+Das Problem ist, dass er diese Aussage nur macht, falls er $r$ = tails gemessen hat. Das Postulat besagt nun, dass er bei der Herleitung seines Statements sich selbst
+auch aus der Many-Worlds Perspektive beschreiben muss. Das heisst, obwohl er aus seiner Sicht entweder $\ket{h}$ oder $\ket{t}$ gemessen hat,
+muss er trotzdem beide Möglichkeiten miteinbeziehen. Wir starten die Analye ab $n$:11:
+\begin{align*}
+\frac{1}{\sqrt{3}}\ket{h}\ket{\downarrow} + \sqrt{\frac{2}{3}}\ket{t}\qty(\frac{1}{\sqrt{2}} \ket{\downarrow} + \frac{1}{\sqrt{2}} \ket{\uparrow})
+\end{align*}
+Wir stellen nun diesen Zustand in den Basen dar, in denen $\overline{W}$ und $W$ messen:
+$\overline{W}$ misst in der Basis $\qty{\ket{+}_{r}, \ket{-}_{r}}$,
+mit $\ket{+}_{r} = \frac{1}{\sqrt{2}} \ket{h} + \frac{1}{\sqrt{2}} \ket{t}$, $\ket{-}_{r} = \frac{1}{\sqrt{2}} \ket{h} - \frac{1}{\sqrt{2}} \ket{t}$,
+und $W$ in der Basis $\qty{\ket{+}_{w}, \ket{-}_{w}}$,
+mit $\ket{+}_{w} = \frac{1}{\sqrt{2}} \ket{\downarrow} + \frac{1}{\sqrt{2}} \ket{\uparrow}$, $\ket{-}_{w} = \frac{1}{\sqrt{2}} \ket{\downarrow} - \frac{1}{\sqrt{2}} \ket{\uparrow}$:
+\begin{align*}
+\frac{3}{\sqrt{12}}\ket{+}_{r}\ket{+}_{w} + \frac{1}{\sqrt{12}}\ket{+}_{r}\ket{-}_{w} - \frac{1}{\sqrt{12}}\ket{-}_{r}\ket{+}_{w} + \frac{1}{\sqrt{12}}\ket{-}_{r}\ket{-}_{w}
+\end{align*}
+Man sieht nun deutlich, dass $W$ auch $w$ = ok messen kann aus $\overline{F}$'s Sicht.
+Unter der Annahme, dass die Annahmen Q, C und S korrekt sind, wird dieses Postulat sozusagen erzwungen.
+Um dieses Postulat zu überprüfen kann man das Gedankenexperiment in wirklichkeit ausführen.
+
+\section*{Referenz}
+\begin{itemize}
+	\item \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6143649/}
+\end{itemize}
+
+\end{document}

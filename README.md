@@ -1,1 +1,1 @@
-# ExtendedWignersFriend
+This is a document that proposes a solution to the following thaught experiment: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6143649/
