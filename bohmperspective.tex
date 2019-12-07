@@ -1,0 +1,69 @@
+\documentclass[a4paper]{article}
+\usepackage{fancyhdr}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{csquotes}
+
+\usepackage{subcaption}
+\usepackage{floatrow}
+\usepackage{fancyhdr}
+\usepackage{afterpage}
+
+\fancyhf{}
+\pagestyle{fancy}
+\rhead{\textcolor{gray}{Mock Draft}}
+
+\title{A Review of the Extended Wigner's Friend Thought Experiment}
+\author{Jannis Naske}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Jannis Naske}
+
+\begin{document}
+\maketitle
+\afterpage{\cfoot{\thepage}}
+
+\section*{Abstract}
+The paper ``Quantum theory cannot consistently describe the use of itself'' by Renner and Frauchiger provides a thought experiment in which their assumptions, Q, C and S can't hold at the same time.
+However, I'm going to show that in their proof there might be a possible mistake in their assumptions.
+
+\section*{The Problem}
+The Problem lies within the following statement:
+\begin{itemize}
+	\item[] \textbf{Statement $\overline{F}^{n:02}$:} ``I am certain that $W$ will observe $w$ = fail at time $n$:31.''
+\end{itemize}
+This statement is derived from the following assumption:
+\begin{itemize}
+	\item[] \textbf{Statement $\overline{F}^{n:01}$:} ``The spin $S$ is in the state $\ket{\rightarrow}_S$ at time $n$:10.''
+\end{itemize}
+The problem is that the state of the spin is given from the perspective of $\overline{F}$ (or given in $\overline{F}$'s relative state, in the case of the many worlds interpretation).
+However, for the proof, this local state of the spin is used, rather than the global one. While this might be ok to do for some interpretations, one can't do this for Bohmian mechanics,
+since the theory uses a global state of everything. So in the case $\overline{F}$ uses Bohmian mechanics for his predictions, he has to use the global state:
+\begin{align*}
+\frac{1}{\sqrt{3}}\ket{h}\ket{\downarrow} + \sqrt{\frac{2}{3}}\ket{t}\qty(\frac{1}{\sqrt{2}} \ket{\downarrow} + \frac{1}{\sqrt{2}} \ket{\uparrow})
+\end{align*}
+Now we describe this state in the bases that $\overline{W}$ and $W$ use in their measurements:
+$\overline{W}$ measures in the basis $\qty{\ket{+}_{r}, \ket{-}_{r}}$,
+with $\ket{+}_{r} = \frac{1}{\sqrt{2}} \ket{h} + \frac{1}{\sqrt{2}} \ket{t}$, $\ket{-}_{r} = \frac{1}{\sqrt{2}} \ket{h} - \frac{1}{\sqrt{2}} \ket{t}$,
+and $W$ in the basis $\qty{\ket{+}_{w}, \ket{-}_{w}}$,
+where $\ket{+}_{w} = \frac{1}{\sqrt{2}} \ket{\downarrow} + \frac{1}{\sqrt{2}} \ket{\uparrow}$, $\ket{-}_{w} = \frac{1}{\sqrt{2}} \ket{\downarrow} - \frac{1}{\sqrt{2}} \ket{\uparrow}$:
+\begin{align*}
+\frac{3}{\sqrt{12}}\ket{+}_{r}\ket{+}_{w} + \frac{1}{\sqrt{12}}\ket{+}_{r}\ket{-}_{w} - \frac{1}{\sqrt{12}}\ket{-}_{r}\ket{+}_{w} + \frac{1}{\sqrt{12}}\ket{-}_{r}\ket{-}_{w}
+\end{align*}
+As one can see, $W$ can measure $w$ = ok, even from $\overline{F}$'s perspective in this case.
+This solves the contradiction when assuming Q, C and S to be true.
+
+\section*{Discussion}
+The reason the contradicton appears in the paper is that when $\overline{F}$ has performed his measurement, the global state of the wavefunction is assumed to be $\ket{\rightarrow}_S$ for $S$.
+But in Bohmian mechanics, the global wavefunction doesn't collapse to a single state after the measurement, instead the particles have changed their position, and the global wavefunction is still in a superposition. In Bohmian mechanics, the movement of the particles actually changes depending on if you only consider a part of the wavefunction, or the global wavefunction as a whole.
+
+The contradiction can also be resolved in the case of the many worlds interpretation. The difference to Bohmian mechanics is this case is that different worlds or relative states evolve independent of each other. But one can still use the exact same analysis above and come again to the conclusion that neither Q, C or S have to be violated. The reason that in this case $W$ can measure $w$ = ok is that the world, that branches into the heads state from the measurement at the beginning, will branch again into a state, where tails might have been measured at the beginning, after $\overline{W}$'s and $W$'s measurements.
+
+\section*{Reference}
+\begin{itemize}
+	\item \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6143649/}
+\end{itemize}
+
+\end{document}
